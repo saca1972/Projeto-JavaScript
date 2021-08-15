@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro</title>
+</head>
+<body>
+	<form id="form_cadastro">
+		<fieldset>
+			<legend>Cadastre-se!</legend>
+			<label for="form_nome">Nome completo</label> <br>
+			<input type="text" id="form_nome" onblur="verifica_nome(this)" placeholder="Insira seu nome completo"> <br><br>
+			<label for="form_cpf">CPF</label> <br>
+			<input type="text" id="form_cpf" onblur="verifica_cpf(this)" placeholder="Insira seu CPF"> <br><br>
+			<label for="form_nascimento">Data de nascimento</label> <br>
+			<input type="date" id="form_nascimento" onblur="verifica_nascimento(this)"><br><br>
+			<label for="">E-mail</label> <br>
+			<input type="text" id="msgemail" onblur="verifica_email(this)" placeholder="Insira seu e-mail"><br><br>
+			<label>Gênero</label>
+			<select id="genero">
+				<option value="">Escolha</option>
+				<option value="masculino">Masculino</option>
+				<option value="feminino">Feminino</option>
+				<option value="não informado">Não informado</option>
+			</select>
+			<br><br>
+			<button onclick="form_enviado()" type="button"> Enviar! </button>
+		</fieldset>
+	</form>
+<div id="mensagem_concluido">
+
+</div>
+
+</body>
+<script src="script_cadastro.js"></script>
+</html>
