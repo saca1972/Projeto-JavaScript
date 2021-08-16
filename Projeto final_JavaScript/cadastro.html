@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Cadastro - Projeto Java Script - Soul Tech</title>
+    <link rel="stylesheet" href="css/style-azul.css">
+    <link rel="stylesheet" href="css/style_cadastro.css">
+    <script src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+  <body>
+
+    <header>
+        <div class="bg-header">
+            <div class="conteudo">
+                <div class="logo">
+                    <a href="index.html" title="Home"><img src="./images/logo.png" class="imgscala" alt="Soul Tech - Sua empresa de Tecnologias"></a>
+                </div>
+                <div class="menu">
+
+                    <input type="checkbox" id="control-nav" />
+                    <label for="control-nav" class="control-nav"></label>
+                    <label for="control-nav" class="control-nav-close"></label>
+
+                    <nav class="float-r">
+                        <ul class="list-auto">
+                            <li>
+                                <a href="index.html" title="Home">Home</a>
+                            </li>
+                            <li>
+                                <a href="calculadora.html" title="Calculadora">Calculadora</a>
+                            </li>
+                            <li>
+                                <a href="conversor.html" title="Conversor de Moeda">Conversor de Moeda</a>
+                            </li>
+                            <li>
+                                <a href="cadastro.html" title="Login / Cadastro" class="ativo">Login / Cadastro</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="buthome">
+                    <div class="butasse botoes_acessibilidade">
+                        <!-- Botões de Acessibilidade -->
+                        <button onclick="fonte('a');" title="Maior">A+</button>
+                        <button onclick="fonte('n');" title="Normal">A</button>
+                        <button onclick="fonte('d');" title="Menor">A-</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="topsite"></div>
+            <div class=acessibilidade">
+                <div class="bgcont-contato">
+                    <div class="conteudo acessibilidade">
+                        <div class="contheader">
+                            <div class="breadcrumb"><a href="index.html">Home</a> > Login / Cadastro</div>
+                            <h1>Login / Cadastro</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="conteudo acessibilidade">
+
+                <div class="cont01">
+                    <div class="contfonthome">
+                        <h2 id="manipula">Nosso cliente</h2>
+                        <div class="tit2" id="manipula">Realize seu cadastro</div>
+                        <div class="tit3" id="manipula">Deixe-nos conhecer melhor seu perfil.</div>
+                    </div>
+                </div>
+                <div class="cont02 imgheight">
+                    <img src="./images/image-contacts-2.png" id="imgtopo" class="imgscala" alt="Nosso Projeto">
+                </div>
+                <div class="clear"></div>
+
+            </div>
+        </section>
+        <section class="flex_formulario">
+            <form id="form_cadastro">
+                <div class="form1 acessibilidade">
+
+                    <label for="form_nome"> <span class="asterisco">*</span> Nome completo</label> <br>
+                    <input type="text" id="form_nome" onblur="verifica_nome(this)"
+                        placeholder="Insira seu nome completo"> <br><br>
+
+                    <label for="form_cpf"> <span class="asterisco">*</span> CPF</label> <br>
+                    <span class="descrever_input">inserir somente números</span><br>
+                    <input type="text" id="form_cpf" onblur="verifica_cpf(this)" placeholder="Insira seu CPF"> <br><br>
+
+                    <label for="form_nascimento"> <span class="asterisco">*</span> Data de nascimento</label> <br>
+                    <span class="descrever_input">necessário pra identificar a maioridade, no formato
+                        DD/MM/AAAA</span><br>
+                    <input type="date" id="form_nascimento" onblur="verifica_nascimento(this)">
+                </div>
+
+
+                <div class="form1 acessibilidade">
+
+                    <label for="msgemail"> <span class="asterisco">*</span> E-mail</label> <br>
+                    <input type="text" id="msgemail" onblur="verifica_email(this)"
+                        placeholder="Insira seu e-mail"><br><br>
+                    <input type="checkbox" style="display: block;" id="receber_email"> <label for="receber_email">Receber novidades do mundo
+                        tech</label> <br><br>
+
+
+                    <label> <span class="asterisco">*</span>Gênero</label> <br>
+                    <span class="descrever_input">pra gente te conhecer um pouquinho melhor ;)</span>
+                    <select id="genero">
+                        <option value="">Escolha</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="não informado">Não informado</option>
+                    </select><br><br>
+
+                </div>
+                <div class="clear"></div>
+                <br><br>
+                <button onclick="form_enviado()" type="button" id="btn_cadastrar"> Criar seu cadastro </button>
+                <p class="infos_form">Não se preocupe, nosso site é seguro! </p>
+                <p class="infos_form">Ao criar o seu cadastro, você concorda com a nossa <a href="#"
+                        class="infos_form">Política de Privacidade</a></p>
+                <p class="infos_form">Já tem cadastro? <a href="#" class="infos_form">Entrar</a> </p>
+                <div class="conteudo">
+                    <div id="mensagem_concluido" class="acessibilidade">
+                    </div>
+                </div>
+
+            </form>
+
+
+        </section>
+    </main>
+    <footer>
+        <div class="conteudo">
+            <div class="footcont1">
+                <a href="index.html" title="Home"><img src="./images/logo.png" class="imgscala" alt="Soul Tech - Sua empresa de Tecnologias"></a>
+            </div>
+            <div class="footcont2 acessibilidade">
+                <p>
+                    Projeto final do curso de JavaScript
+                </p>
+                <p>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="calculadora.html">CALCULADORA</a></li>
+                            <li><a href="conversor.html">CONVERSOR DE MOEDA</a></li>
+                            <li><a href="cadastro.html">LOGIN/CADASTRO</a></li>
+                        </ul>
+            </div>
+            <div class="footcont3">
+                <h4>Segue a gente!</h4>
+                <ul>
+                    <li><a href="#" target="_blank"><img src="./images/ico-instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=55###########" target="_blank">
+                <img class="whatsapp" src="./images/ico-whats-app.png" />
+            </a>
+        </div>
+        <a id="subirTopo">
+            ^
+        </a>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js\script_cadastro.js"></script>
+
+  </body>
+</html>

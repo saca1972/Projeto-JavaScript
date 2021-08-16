@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Java Script - Soul Tech</title>
+    <link rel="stylesheet" href="css/style-azul.css">
+    <script src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="principal">
+
+    <header>
+        <div class="bg-header">
+            <div class="conteudo">
+                <div class="logo">
+                    <a href="index.html" title="Home"><img src="./images/logo.png" id="novologo" class="imgscala"
+                        alt="Soul Tech - Sua empresa de Tecnologias"></a>
+                </div>
+                <div class="menu">
+
+                    <input type="checkbox" id="control-nav" />
+                    <label for="control-nav" class="control-nav"></label>
+                    <label for="control-nav" class="control-nav-close"></label>
+
+                    <nav class="float-r">
+                        <ul class="list-auto">
+                            <li>
+                                <a href="index.html" title="Home" id="ativo" class="ativo">Home</a>
+                            </li>
+                            <li>
+                                <a href="calculadora.html" title="Calculadora">Calculadora</a>
+                            </li>
+                            <li>
+                                <a href="conversor.html" title="Conversor de Moeda">Conversor de Moeda</a>
+                            </li>
+                            <li>
+                                <a href="cadastro.html" title="Login / Cadastro">Login / Cadastro</a>
+                            </li>
+                            <li class="butmenu">
+                                <input type="button" value="Mudar" onclick="alteracoes()" class="buttop">
+                                <input type="button" value="Resetar" onclick="antigo()" class="buttop">
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="buthome">
+
+                    <div class="butmenu2">
+                        <input type="button" value="Mudar" onclick="alteracoes()" class="buttop">
+                        <input type="button" value="Resetar" onclick="antigo()" class="buttop">
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="topsite"></div>
+            <div class="conteudo acessibilidade">
+
+                <div class="cont02 imgheight">
+                    <img src="./images/home-1.png" id="imgtopo" class="imgscala" alt="Nosso Projeto">
+                </div>
+                <div class="cont01">
+                    <div class="contfonthome">
+                        <h2 id="manipula">Sua empresa de tecnologia</h2>
+                        <div class="tit2" id="manipula">Foco no Resultado</div>
+                        <div class="tit3" id="manipula">Buscamos o melhor resultado em tecnologia para sua empresa</div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+        </section>
+
+        <section class="bg-green" id="bgorange" >
+            <div class="conteudo acessibilidade">
+                <div class="title-section">
+                    <div class="acessibilidade">Nosso Time</div>
+                    <div class="tith" id="manipula">
+                        Quem esta por trás desse projeto
+                    </div>
+                </div>
+                <div class="cardteam">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/team-mariane-freitas.jpg" alt="Mariane Freitas">
+                        </div>
+                        <div class="contentBx">
+                            <h2>Mariane Freitas</h2>
+                            <div class="size">
+                                <span><a href="https://www.linkedin.com/in/marianedefreitas/" target="_blank"><img
+                                            src="./images/ico-team-linkedin.png"></a></span>
+                                <span><a href="https://github.com/marianefreitas" target="_blank"><img
+                                            src="./images/ico-team-github.png"></a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="contpess">
+                        Estudante de Full Stack da SoulCode Academy. Trabalhou na página de conversão de moedas
+                    </div>
+                </div>
+                <div class="cardteam">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/team-lina-amaral.jpg" alt="Lina Amaral">
+                        </div>
+                        <div class="contentBx">
+                            <h2>Lina Amaral</h2>
+                            <div class="size">
+                                <span><a href="https://www.linkedin.com/in/lina-amaral-caetano-a409ba208/"
+                                        target="_blank"><img src="./images/ico-team-linkedin.png"></a></span>
+                                <span><a href="https://github.com/LinaAmaral" target="_blank"><img
+                                            src="./images/ico-team-github.png"></a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="contpess">
+                        Estudante de Full Stack da SoulCode Academy. Trabalhou na página de conversão deste website,
+                        juntamente com Mariane Freitas.
+                    </div>
+                </div>
+                <div class="cardteam">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/team-yasmine-pallin.jpg" alt="Yasmine Paliln">
+                        </div>
+                        <div class="contentBx">
+                            <h2>Yasmine Paliln</h2>
+                            <div class="size">
+                                <span><a href="https://www.linkedin.com/in/yaspallin/" target="_blank"><img
+                                            src="./images/ico-team-linkedin.png"></a></span>
+                                <span><a href="https://github.com/YasPallin" target="_blank"><img
+                                            src="./images/ico-team-github.png"></a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="contpess">
+                        Estudante de Full Stack da SoulCode Academy. Adora conhecer coisas novas e viajar. Desenvolveu a
+                        página de cadastro.
+                    </div>
+                </div>
+                <div class="cardteam">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/team-camila-chang.jpg" alt="Camila Chang">
+                        </div>
+                        <div class="contentBx">
+                            <h2>Camila Chang</h2>
+                            <div class="size">
+                                <span><a href="https://www.linkedin.com/in/camila-chang-peres-7010105a/"
+                                        target="_blank"><img src="./images/ico-team-linkedin.png"></a></span>
+                                <span><a href="https://github.com/camichang" target="_blank"><img
+                                            src="./images/ico-team-github.png"></a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="contpess">
+                        Estudante de Full Stack da SoulCode Academy. Apaixonada por gastronomia e culturas orientais.
+                        Desenvolveu a página de cadastro.
+                    </div>
+                </div>
+                <div class="cardteam">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/team-sergio-amaral.jpg" alt="Sergio Amaral">
+                        </div>
+                        <div class="contentBx">
+                            <h2>Sergio Amaral</h2>
+                            <div class="size">
+                                <span><a href="https://www.linkedin.com/in/sergio-amaral-9540021ab" target="_blank"><img
+                                            src="./images/ico-team-linkedin.png"></a></span>
+                                <span><a href="https://github.com/saca1972" target="_blank"><img
+                                            src="./images/ico-team-github.png"></a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="contpess">
+                        Estudante de Full Stack da SoulCode Academy. Praticante de canoagem e rapel. Amante de cinema e natureza. Trabalhou neste website na geração da calculadora.
+                    </div>
+                </div>
+                <div class="cardteam">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/team-jota-nascimento.jpg" alt="Jota Nascimento">
+                        </div>
+                        <div class="contentBx">
+                            <h2>Jota Nascimento</h2>
+                            <div class="size">
+                                <span><a href="#" target="_blank"><img src="./images/ico-team-linkedin.png"></a></span>
+                                <span><a href="#" target="_blank"><img src="./images/ico-team-github.png"></a></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="contpess">
+                        Estudante de Full Stack da SoulCode Academy. Adora anomais e viagens. Desenvolveu a página home.
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="conteudo">
+            <div class="footcont1">
+                <a href="index.html" title="Home"><img src="./images/logo.png" class="imgscala" alt="Soul Tech - Sua empresa de Tecnologias"></a>
+            </div>
+            <div class="footcont2 acessibilidade">
+                <p>
+                    Projeto final do curso de JavaScript
+                </p>
+                <p>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="calculadora.html">CALCULADORA</a></li>
+                            <li><a href="conversor.html">CONVERSOR DE MOEDA</a></li>
+                            <li><a href="cadastro.html">LOGIN/CADASTRO</a></li>
+                        </ul>
+            </div>
+            <div class="footcont3">
+                <h4>Segue a gente!</h4>
+                <ul>
+                    <li><a href="#" target="_blank"><img src="./images/ico-instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=55###########" target="_blank">
+                <img class="whatsapp" src="./images/ico-whats-app.png" />
+            </a>
+        </div>
+        <a id="subirTopo">
+            ^
+        </a>
+    </footer>
+
+    <div class="butasse botoes_acessibilidade">
+        <!-- Botões de Acessibilidade -->
+        <button onclick="fonte('a');" title="Maior">A+</button>
+        <button onclick="fonte('n');" title="Normal">A</button>
+        <button onclick="fonte('d');" title="Menor">A-</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+    
+
+</body>
+
+</html>

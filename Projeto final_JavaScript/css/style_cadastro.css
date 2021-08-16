@@ -1,0 +1,66 @@
+form {
+    color: rgb(63, 63, 63);
+    line-height: 1.5;
+}
+
+input {
+    border-radius: 5px;
+    border-color: white;
+    height: 25px;
+}
+
+input:nth-of-type(1), input:nth-of-type(4){
+    width: 400px;
+}
+
+span.asterisco {
+    color: red;
+}
+
+span.descrever_input {
+    color: rgb(160, 160, 160);
+    font-size: smaller;
+}
+
+p.infos_form{
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+a.infos_form{
+    text-decoration: none;
+    font-weight: 900;
+    color: #4d4e2d;
+}
+
+.flex_formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 2%;
+}
+
+fieldset{
+    border: none;
+    padding-top: 1%;
+}
+
+#btn_cadastrar {
+    color: white;
+    border-radius: 5px;
+    background-color: #658C49;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px;
+    }
+#receber_email{
+    height: 15px;
+    width: 15px;
+}
+
+#mensagem_concluido{
+    margin-top: 20px;
+    font-size: larger;
+}

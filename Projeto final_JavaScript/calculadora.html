@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Projeto Java Script - Soul Tech</title>
+    <link rel="stylesheet" href="css/style-azul.css">
+    <script src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="bg-header">
+            <div class="conteudo">
+                <div class="logo">
+                    <a href="index.html" title="Home"><img src="./images/logo.png" class="imgscala" alt="Soul Tech - Sua empresa de Tecnologias"></a>
+                </div>
+                <div class="menu">
+
+                    <input type="checkbox" id="control-nav" />
+                    <label for="control-nav" class="control-nav"></label>
+                    <label for="control-nav" class="control-nav-close"></label>
+
+                    <nav class="float-r">
+                        <ul class="list-auto">
+                            <li>
+                                <a href="index.html" title="Home">Home</a>
+                            </li>
+                            <li>
+                                <a href="calculadora.html" title="Calculadora" class="ativo">Calculadora</a>
+                            </li>
+                            <li>
+                                <a href="conversor.html" title="Conversor de Moeda">Conversor de Moeda</a>
+                            </li>
+                            <li>
+                                <a href="cadastro.html" title="Login / Cadastro">Login / Cadastro</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="buthome">
+                    <div class="butasse botoes_acessibilidade">
+                        <!-- Botões de Acessibilidade -->
+                        <button onclick="fonte('a');" title="Maior">A+</button>
+                        <button onclick="fonte('n');" title="Normal">A</button>
+                        <button onclick="fonte('d');" title="Menor">A-</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="topsite"></div>
+            <div class="acessibilidade">
+
+                <div class="bgcont-calculadora">
+                    <div class="conteudo acessibilidade">
+                        <div class="contheader">
+                            <div class="breadcrumb"><a href="index.html">Home</a> > Calculadora</div>
+                            <h1>Calculadora</h1>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section>
+            
+            <div class="conteudo acessibilidade aligncenter">
+
+                <button id="cbasica" style="margin-top: 50px;">Calculadora Básica</button>
+                <button id="ccientifica" style="margin-top: 50px;">Calculadora Científica</button>
+
+                <section class="contcalc">
+                    <div class="basica">
+                        <form name="calc">
+                            <table class="calculator" cellspacing="0" cellpadding="1">
+                                <tr>
+                                    <td colspan="4"><input id="display" name="display" value="0" size="20"
+                                            maxlength="25"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnTop" name="btnTop" value="CE"
+                                            onclick="this.form.display.value= 0 "></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="+"
+                                            onclick="addChar(this.form.display, '+')"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="7"
+                                            onclick="addChar(this.form.display, '7')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="8"
+                                            onclick="addChar(this.form.display, '8')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="9"
+                                            onclick="addChar(this.form.display, '9')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="/"
+                                            onclick="addChar(this.form.display, '/')"></td>
+                                <tr>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="4"
+                                            onclick="addChar(this.form.display, '4')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="5"
+                                            onclick="addChar(this.form.display, '5')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="6"
+                                            onclick="addChar(this.form.display, '6')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="*"
+                                            onclick="addChar(this.form.display, '*')"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="1"
+                                            onclick="addChar(this.form.display, '1')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="2"
+                                            onclick="addChar(this.form.display, '2')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="3"
+                                            onclick="addChar(this.form.display, '3')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="-"
+                                            onclick="addChar(this.form.display, '-')"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="&#177"
+                                            onclick="changeSign(this.form.display)"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="0"
+                                            onclick="addChar(this.form.display, '0')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="."
+                                            onclick="addChar(this.form.display, '.')"></td>
+                                    <td><input type="button" class="btnTop" name="btnTop" value="="
+                                            onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+
+                    <div class="cientifica">
+                        <form name="calc2">
+                            <table class="calculator" cellspacing="0" cellpadding="1">
+                                <tr>
+                                    <td colspan="5"><input id="display" name="display" value="0" size="20"
+                                            maxlength="25"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnTop" name="btnTop" value="CE"
+                                            onclick="this.form.display.value= 0 "></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="+"
+                                            onclick="addChar(this.form.display, '+')"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="7"
+                                            onclick="addChar(this.form.display, '7')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="8"
+                                            onclick="addChar(this.form.display, '8')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="9"
+                                            onclick="addChar(this.form.display, '9')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="/"
+                                            onclick="addChar(this.form.display, '/')"></td>
+                                    <td><input type="button" class="btnOpps" name="btnOpps" value="√"
+                                            onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+                                <tr>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="4"
+                                            onclick="addChar(this.form.display, '4')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="5"
+                                            onclick="addChar(this.form.display, '5')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="6"
+                                            onclick="addChar(this.form.display, '6')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="*"
+                                            onclick="addChar(this.form.display, '*')"></td>
+                                    <td><input type="button" class="btnOpps" name="btnOpps" value="x²"
+                                            onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="1"
+                                            onclick="addChar(this.form.display, '1')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="2"
+                                            onclick="addChar(this.form.display, '2')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="3"
+                                            onclick="addChar(this.form.display, '3')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="-"
+                                            onclick="addChar(this.form.display, '-')"></td>
+                                    <td><input type="button" class="btnOpps" name="btnOpps" value="x³"
+                                            onclick="if(checkNum(this.form.display.value)) { square2(this.form) }"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="&#177"
+                                            onclick="changeSign(this.form.display)"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="0"
+                                            onclick="addChar(this.form.display, '0')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="."
+                                            onclick="addChar(this.form.display, '.')"></td>
+                                    <td><input type="button" class="btnTop" name="btnTop" value="="
+                                            onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+                                    </td>
+                                    <td><input type="button" class="btnOpps" name="btnOpps" value="π"
+                                            onclick="addChar(this.form.display,'3.14159265359')"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="conteudo">
+            <div class="footcont1">
+                <a href="index.html" title="Home"><img src="./images/logo.png" class="imgscala" alt="Soul Tech - Sua empresa de Tecnologias"></a>
+            </div>
+            <div class="footcont2 acessibilidade">
+                <p>
+                    Projeto final do curso de JavaScript
+                </p>
+                <p>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="calculadora.html">CALCULADORA</a></li>
+                            <li><a href="conversor.html">CONVERSOR DE MOEDA</a></li>
+                            <li><a href="cadastro.html">LOGIN/CADASTRO</a></li>
+                        </ul>
+            </div>
+            <div class="footcont3">
+                <h4>Segue a gente!</h4>
+                <ul>
+                    <li><a href="#" target="_blank"><img src="./images/ico-instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=55###########" target="_blank">
+                <img class="whatsapp" src="./images/ico-whats-app.png" />
+            </a>
+        </div>
+        <a id="subirTopo">
+            ^
+        </a>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="./js/calculadora.js"></script>
+
+</body>
+
+</html>

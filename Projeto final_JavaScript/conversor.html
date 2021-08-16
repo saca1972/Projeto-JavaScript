@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas - Projeto Java Script - Soul Tech</title>
+    <link rel="stylesheet" href="css/style-azul.css">
+    <script src="js/script.js"></script>
+    <script src="./js/script_conversor_moedas.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="bg-header">
+            <div class="conteudo">
+                <div class="logo">
+                    <a href="index.html" title="Home"><img src="./images/logo.png" class="imgscala" alt="Soul Tech - Sua empresa de Tecnologias"></a>
+                </div>
+                <div class="menu">
+
+                    <input type="checkbox" id="control-nav" />
+                    <label for="control-nav" class="control-nav"></label>
+                    <label for="control-nav" class="control-nav-close"></label>
+
+                    <nav class="float-r">
+                        <ul class="list-auto">
+                            <li>
+                                <a href="index.html" title="Home">Home</a>
+                            </li>
+                            <li>
+                                <a href="calculadora.html" title="Calculadora">Calculadora</a>
+                            </li>
+                            <li>
+                                <a href="conversor.html" title="Conversor de Moeda" class="ativo">Conversor de Moeda</a>
+                            </li>
+                            <li>
+                                <a href="cadastro.html" title="Login / Cadastro">Login / Cadastro</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="buthome">
+                    <div class="butasse botoes_acessibilidade">
+                        <!-- Botões de Acessibilidade -->
+                        <button onclick="fonte('a');" title="Maior">A+</button>
+                        <button onclick="fonte('n');" title="Normal">A</button>
+                        <button onclick="fonte('d');" title="Menor">A-</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="topsite"></div>
+            <div class=acessibilidade">
+
+                <div class="bgcont-conversor">
+                    <div class="conteudo acessibilidade">
+                        <div class="contheader">
+                            <div class="breadcrumb"><a href="index.html">Home</a> > Conversor de Moeda</div>
+                            <h1>Conversor de Moeda</h1>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section>
+
+            <div class="conteudo acessibilidade">
+
+
+            <section class="container_1">
+
+                <div class="container_formulario">
+                    <label for="valor_inserido">Valor:</label>
+                    <input type="text" placeholder="Ex: 100.00" name="valor_inserido" id="valor" size="10"
+                        onblur="valida_valor()">
+                    <label for="tipo_moeda">em:</label>
+                    <select id="tipo_inserido" name="tipo_moeda">
+                        <option value="real">Real</option>
+                        <option value="usd">Dolar USD </option>
+                        <option value="cad">Dolar CAD</option>
+                        <option value="euro">Euro</option>
+                        <option value="libra">Libra</option>
+                        <option value="peso">Peso ARG </option>
+                    </select>
+                    <button id="botao" type="submit" onclick="recebendo()">Converter</button>
+                </div>
+
+            </section>
+
+
+            <section class="container_conversores1">
+
+                <div class="conteudo_divs">
+                    <p>R$</p>
+                    <div class="texto_conversao" id="real"></div>
+                    <img class="bandeira" src="images/brasil.jpg">
+                </div>
+                <div class="conteudo_divs">
+                    <p>$</p>
+                    <div class="texto_conversao" id="usd"></div>
+                    <img class="bandeira" src="images/usa.jpg">
+
+                </div>
+                <div class="conteudo_divs">
+                    C$
+                    <div class="texto_conversao" id="cad"></div>
+                    <img class="bandeira" src="images/canada.jpg">
+
+                </div>
+
+            </section>
+            <section class="container_conversores2">
+
+                <div class="conteudo_divs">
+                    <p> €</p>
+                    <div class="texto_conversao" id="euro"></div>
+                    <img class="bandeira" src="images/união europeia.jpg">
+                </div>
+                <div class="conteudo_divs">
+                    <p>£ </p>
+                    <div class="texto_conversao" id="libra"></div>
+                    <img class="bandeira" src="images/reino unido.jpg">
+
+
+                </div>
+                <div class="conteudo_divs">
+                    <p> $</p>
+                    <div class="texto_conversao" id="peso"></div>
+                    <img class="bandeira" src="images/argentina.jpg">
+
+                </div>
+
+            </section>
+
+
+
+
+            </div>
+
+        </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="conteudo">
+            <div class="footcont1">
+                <a href="index.html" title="Home"><img src="./images/logo.png" class="imgscala" alt="Soul Tech - Sua empresa de Tecnologias"></a>
+            </div>
+            <div class="footcont2 acessibilidade">
+                <p>
+                    Projeto final do curso de JavaScript
+                </p>
+                <p>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="calculadora.html">CALCULADORA</a></li>
+                            <li><a href="conversor.html">CONVERSOR DE MOEDA</a></li>
+                            <li><a href="cadastro.html">LOGIN/CADASTRO</a></li>
+                        </ul>
+            </div>
+            <div class="footcont3">
+                <h4>Segue a gente!</h4>
+                <ul>
+                    <li><a href="#" target="_blank"><img src="./images/ico-instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="./images/ico-linkedin.png" alt="Linkedin"></a></li>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=55###########" target="_blank">
+                <img class="whatsapp" src="./images/ico-whats-app.png" />
+            </a>
+        </div>
+        <a id="subirTopo">
+            ^
+        </a>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js/script_conversor_moedas.js"></script>
+
+</body>
+
+</html>
